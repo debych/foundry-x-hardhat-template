@@ -1,14 +1,35 @@
-# Compiler files
 cache/
+artifacts/
 out/
+broadcast/
+cache_hardhat/
+artifacts-zk
+cache_hardhat-zk
 
-# Ignores development broadcast logs
-!/broadcast
-/broadcast/*/31337/
-/broadcast/**/dry-run/
+coverage*
+typechain/
 
-# Docs
-docs/
+# IDE settings
+.vscode/*
+!.vscode/settings.json.default
+!.vscode/launch.json.default
+!.vscode/extensions.json.default
+.idea
 
-# Dotenv file
+node_modules/
 .env
+
+.yalc
+yalc.lock
+
+contractsInfo.json
+.DS_Store
+yarn-error.log
+
+.DS_Store*
+lcov.info
+
+test/logs/*
+!test/logs/.gitkeep
+
+.DS_Store
