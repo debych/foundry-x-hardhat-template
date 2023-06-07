@@ -3,7 +3,7 @@ import fs from 'fs'
 import { HardhatUserConfig } from 'hardhat/types'
 import '@typechain/hardhat'
 import 'hardhat-preprocessor'
-import { node_url, accounts } from '../Multi-Rubic-Proxy/utils/network'
+import { node_url, accounts } from './utils/network'
 import '@nomiclabs/hardhat-etherscan'
 import * as dotenv from 'dotenv'
 dotenv.config()
@@ -53,7 +53,7 @@ const config: HardhatUserConfig = {
         : undefined,
     },
     goerli: {
-      url: 'https://eth-goerli.public.blastapi.io',
+      url: node_url('goerli'),
     },
     ethereum: {
       url: `${process.env.ETH_NODE_URI_MAINNET}`,
